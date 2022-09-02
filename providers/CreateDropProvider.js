@@ -11,17 +11,19 @@ export const CreateDropProvider = ({ children }) => {
   const { data: account } = useAccount()
   const { data: signer } = useSigner()
   const { activeChain } = useNetwork()
-  const [name, setName] = useState('')
-  const [symbol, setSymbol] = useState('MUSIC')
+  const [name, setName] = useState('Wura, A Narrative')
+  const [symbol, setSymbol] = useState('WURA')
   const [defaultAdmin, setDefaultAdmin] = useState(account?.address)
   const [musicMetadata, setMusicMetadata] = useState(account?.address)
-  const [contractMetadata, setContractMetadata] = useState(account?.address)
-  const [editionSize, setEditionSize] = useState(100)
+  const [contractMetadata, setContractMetadata] = useState(
+    'ipfs://bafyreiar3wk5wliroznzjd6qtew4wqu5q64o4zal4jrsjvypnvtebkb2dq/metadata.json'
+  )
+  const [editionSize, setEditionSize] = useState(15)
   const [royaltyBps, setRoyaltyBps] = useState(300)
   const [lengthOfDrop, setLengthOfDrop] = useState(31)
   const [fundsRecipient, setFundsRecipient] = useState(account?.address)
-  const [publicSalePrice, setPublicSalePrice] = useState('0')
-  const [maxSalePurchasePerAddress, setMaxSalePurchasePerAddress] = useState(1)
+  const [publicSalePrice, setPublicSalePrice] = useState('22200000000000000')
+  const [maxSalePurchasePerAddress, setMaxSalePurchasePerAddress] = useState(0)
   const [publicSaleStart, setPublicSaleStart] = useState(Math.round(Date.now() / 1000))
   const [publicSaleEnd, setPublicSaleEnd] = useState(publicSaleStart + 60 * 60 * 24 * 31)
   const [presaleStart, setPresaleStart] = useState(0)
@@ -36,7 +38,10 @@ export const CreateDropProvider = ({ children }) => {
     const uriBase = musicMetadata + '?'
     const contractUri = contractMetadata
     const dropDurationSeconds = 60 * 60 * 24 * parseInt(lengthOfDrop)
-    const publicSaleEnd = parseInt(publicSaleStart) + dropDurationSeconds
+    const publicSaleEnd =
+      dropDurationSeconds > 0
+        ? parseInt(publicSaleStart) + dropDurationSeconds
+        : 253392527340
 
     return contract
       .createDrop(

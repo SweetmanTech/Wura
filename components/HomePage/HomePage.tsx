@@ -40,7 +40,7 @@ const HomePage: NextPage<HomePageProps> = ({ collection, chainId }) => {
           name="description"
           content={
             collection.editionMetadata?.description ||
-            "VolFM's creator toolkit makes it easy to create a music NFT collection, with tooling that scales with your creative ambitions"
+            "Wura, A Narrative"
           }
         />
         <meta name="og:title" content={`${collection.name}`} />
@@ -52,7 +52,7 @@ const HomePage: NextPage<HomePageProps> = ({ collection, chainId }) => {
           name="og:description"
           content={
             collection.editionMetadata?.description ||
-            "VolFM's creator toolkit makes it easy to create a music NFT collection, with tooling that scales with your creative ambitions"
+            "Wura, A Narrative"
           }
         />
         <meta name="og:image" content={ogImage} />
@@ -60,7 +60,7 @@ const HomePage: NextPage<HomePageProps> = ({ collection, chainId }) => {
         <meta name="twitter:title" content={`${collection.name}`} />
         <meta
           name="twitter:url"
-          content="https://www.vol.fm/#/"
+          content="https://planetsun.xyz"
         />
         <meta name="twitter:image" content={ogImage} />
       </Head>
@@ -73,34 +73,11 @@ const HomePage: NextPage<HomePageProps> = ({ collection, chainId }) => {
           <Text variant="menu-lg" mb="x8" align="center">
             <b>{collection.name}</b>
           </Text>
-          <Text variant="label-lg" >
-            4 Artists:
-          </Text>
-          <Text mb="x4" >
-            <a href="https://twitter.com/moruf88" target="__blank"><u>MoRuf</u></a>, <a href="https://twitter.com/marcusariah" target="__blank"><u>Marcus</u></a>, <a color="#37735B" href="https://twitter.com/ikenna92" target="__blank"><u>Ikenna</u></a>, and <a href="https://twitter.com/jhamar" target="__blank"><u>Jhamar</u></a>
-          </Text>
-          <Text variant="label-lg" >
-            Smart Contract:
-          </Text>
-          <Text mb="x4" >
-            <a href="https://github.com/SweetmanTech" target="__blank"><u>sweetman.eth</u></a>
-          </Text>
-          <Text variant="label-lg" >
-            Drop #1:
-          </Text>
-          <Text mb="x4" >
-            The purpose of this drop is to find the first 100 members of <a href="https://twitter.com/thefifthartist" target="__blank"><u>The Fifth Leaf</u></a> so they can help us create a full album.
-          </Text> 
-          <Text variant="label-lg" >
-            Next Drop:
-          </Text>
-          <Text mb="x4" >
-            10/01/2022
-          </Text> 
-          <Text variant="label-lg" >
-            Song Metadata:
-          </Text> 
+           
           <Text style={{whiteSpace: "pre-line"}}>{collection?.editionMetadata?.description}</Text>
+          <Text >
+            <u><a href="https://ipfs.io/ipfs/bafyreid64nd5myo4ucwdtunhkmh6lbxjrpiqiirswzdw7w5ilbv55vtjku/metadata.json" target="__blank">view full music metadata</a></u>
+          </Text>
           <Box mt="x8" mx="auto" style={{ maxWidth: 560 }}>
           <ERC721DropContractProvider
                 erc721DropAddress={collection.address}

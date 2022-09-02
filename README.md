@@ -1,15 +1,16 @@
-## Jersey Gardens UI 🪴
+## Wura, A Narrative UI
 
-Mint Page: [https://jerseygardens.vercel.app/](https://jerseygardens.vercel.app/)
+- Single by J. Mack ENT.
 
-![JG_MINT](https://user-images.githubusercontent.com/23249402/186443382-f666293d-4b6a-42b1-a1ba-78fd72b22ef2.gif)
+Mint Page: [planetsun.xyz](https://planetsun.xyz/)
 
 ### Get Started
+
 1. install dependencies with `yarn`
 2. update ENV variables in `.env.local`
 3. start the server with `yarn dev`
 
-
 ### Credits
-- Zora - [mint-page-template](https://github.com/ourzora/mint-page-template)
 
+- Zora - [mint-page-template](https://github.com/ourzora/mint-page-template)
+- Zora - [zora-drops-contracts](https://github.com/ourzora/zora-drops-contracts)
