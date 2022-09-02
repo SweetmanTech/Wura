@@ -106,14 +106,6 @@ export function MintDetails({
             {startDate.toLocaleString(...dateOptions as [string, Intl.DateTimeFormatOptions])}
           </Text>
         </Flex>
-        <Flex gap="x2" justify="space-between">
-          <Text variant="paragraph-sm" color="tertiary">
-            Public sale end
-          </Text>
-          <Text variant="paragraph-sm" align="right">
-            {!isNaN(endDate.getTime()) ? endDate.toLocaleString(...dateOptions as [string, Intl.DateTimeFormatOptions]) : 'Never'}
-          </Text>
-        </Flex>
       </Stack>
     </Stack>
   )
