@@ -18,7 +18,7 @@ export const CreateDropProvider = ({ children }) => {
   const [contractMetadata, setContractMetadata] = useState(
     'ipfs://bafkreif67d4hefyr5klirohzqnbed4ntgmjk6yjo2jdsnm7irrempwbxjm'
   )
-  const [editionSize, setEditionSize] = useState(15)
+  const [editionSize, setEditionSize] = useState(150)
   const [royaltyBps, setRoyaltyBps] = useState(300)
   const [lengthOfDrop, setLengthOfDrop] = useState(31)
   const [fundsRecipient, setFundsRecipient] = useState(account?.address)
