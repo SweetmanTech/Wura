@@ -63,19 +63,6 @@ export function MintDetails({
             )}
           </Text>
         </Flex>
-        <Flex gap="x2" justify="space-between">
-          <Text variant="paragraph-sm" color="tertiary">
-            Max per address
-          </Text>
-          <Text variant="paragraph-sm">
-            {/*userMintedCount && maxPerWallet < OPEN_EDITION_SIZE && (
-                <Box display="inline" color="tertiary">
-                  {userMintedCount}/
-                </Box>
-              )*/}
-            {maxPerWallet > OPEN_EDITION_SIZE ? 'Unlimited' : maxPerWallet}
-          </Text>
-        </Flex>
         {showPresale && presaleExists && (
           <>
             <Flex gap="x2" justify="space-between">
