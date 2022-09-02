@@ -16,7 +16,7 @@ export const CreateDropProvider = ({ children }) => {
   const [defaultAdmin, setDefaultAdmin] = useState(account?.address)
   const [musicMetadata, setMusicMetadata] = useState(account?.address)
   const [contractMetadata, setContractMetadata] = useState(
-    'ipfs://bafyreiar3wk5wliroznzjd6qtew4wqu5q64o4zal4jrsjvypnvtebkb2dq/metadata.json'
+    'ipfs://bafkreif67d4hefyr5klirohzqnbed4ntgmjk6yjo2jdsnm7irrempwbxjm'
   )
   const [editionSize, setEditionSize] = useState(15)
   const [royaltyBps, setRoyaltyBps] = useState(300)
