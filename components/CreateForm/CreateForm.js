@@ -4,14 +4,13 @@ import { useCreateDrop } from '@providers/CreateDropProvider'
 
 const CreateForm = () => {
   const {
-    setName,
-    setSymbol,
     lengthOfDrop,
     setLengthOfDrop,
-    setContractMetadata,
     setMusicMetadata,
-    setPublicSaleStart,
-    publicSaleStart,
+    publicSalePrice,
+    setPublicSalePrice,
+    fundsRecipient,
+    setFundsRecipient,
   } = useCreateDrop()
 
   return (
@@ -24,41 +23,10 @@ const CreateForm = () => {
       marginBottom={15}
     >
       <Input
-        placeholder="contract name"
-        label="contract name"
-        onChange={(e) => {
-          setName(e.target.value)
-        }}
-      />
-      <Input
-        placeholder="MUSIC"
-        label="contract symbol"
-        onChange={(e) => {
-          setSymbol(e.target.value)
-        }}
-      />
-      <Input
         placeholder="ipfs://"
         label="music metadata"
         onChange={(e) => {
           setMusicMetadata(e.target.value)
-        }}
-      />
-      <Input
-        placeholder="ipfs://"
-        label="contract metadata"
-        onChange={(e) => {
-          setContractMetadata(e.target.value)
-        }}
-      />
-      <Input
-        placeholder={`defaults to now (${publicSaleStart})`}
-        type="number"
-        label="public sale start - seconds (https://www.epochconverter.com/)"
-        min={0}
-        step={1}
-        onChange={(e) => {
-          setPublicSaleStart(e.target.value)
         }}
       />
       <Input
@@ -69,6 +37,23 @@ const CreateForm = () => {
         step={1}
         onChange={(e) => {
           setLengthOfDrop(e.target.value)
+        }}
+      />
+      <Input
+        placeholder={publicSalePrice}
+        type="number"
+        label="price (wei)"
+        min={0}
+        step={1}
+        onChange={(e) => {
+          setPublicSalePrice(e.target.value)
+        }}
+      />
+      <Input
+        placeholder={fundsRecipient}
+        label="seller funds recipient"
+        onChange={(e) => {
+          setFundsRecipient(e.target.value)
         }}
       />
       <CreateDropButton />

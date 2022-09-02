@@ -12,7 +12,7 @@ const CreatePage = () => (
       alignItems="center"
       justifyContent="space-between"
     >
-      <Text>Jersey Gardens - Free Drop Creator</Text>
+      <Text>Wura, A Narrative</Text>
       <ConnectButton />
     </Box>
     <CreateForm />
