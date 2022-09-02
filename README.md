@@ -4,6 +4,8 @@
 
 Mint Page: [planetsun.xyz](https://planetsun.xyz/)
 
+<img width="828" alt="Screen Shot 2022-09-02 at 11 25 33 AM" src="https://user-images.githubusercontent.com/23249402/188170687-1b515510-5f3b-4c63-925b-d820989c6513.png">
+
 ### Get Started
 
 1. install dependencies with `yarn`
