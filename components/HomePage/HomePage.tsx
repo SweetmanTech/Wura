@@ -27,7 +27,7 @@ interface HomePageProps {
 }
 
 const HomePage: NextPage<HomePageProps> = ({ collection, chainId }) => {
-  const ogImage = ipfsImage(collection.editionMetadata.imageURI)
+  const ogImage = ipfsImage("ipfs://bafybeifomuzbda6vaa2zas5il5r3k2wvtnkuuhg3d2wij6iv572pttmiqa/Wura cover art (1).png")
   const { presaleExists, saleNotStarted, saleIsFinished } = useSaleStatus({ collection })
   const [showPresale, setShowPresale] = useState(saleNotStarted && !saleIsFinished)
 
@@ -46,7 +46,7 @@ const HomePage: NextPage<HomePageProps> = ({ collection, chainId }) => {
         <meta name="og:title" content={`${collection.name}`} />
         <meta
           name="og:url"
-          content="https://www.vol.fm/#/"
+          content="https://planetsun.xyz"
         />
         <meta
           name="og:description"

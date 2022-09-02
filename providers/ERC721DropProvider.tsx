@@ -224,9 +224,7 @@ function ERC721DropContractProvider({
 
   const updateMintCounters = async () => {
     const userMintedCount = await fetchUserMintedCount()
-    const totalMinted = await fetchTotalMinted()
     if (userMintedCount) setUserMintedCount(userMintedCount)
-    if (totalMinted) setTotalMinted(totalMinted)
   }
 
   const fetchUserMintedCount = async () => {
